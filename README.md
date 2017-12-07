@@ -16,17 +16,8 @@ cp ~/.ssh/id_rsa.pub ssh/
 
 Nota: si la clave tiene password, este se le solicitara al arrancar las aplicaciones en caso de necesitar instalar dependencias.
 
-3 - **Levantar entorno docker:**
 
-En el root de la repo ejecutar:
-
-```bash
-docker-compose up -d
-```
-
-(el build de la imagen de front tarda algunos minutos)
-
-4 - **Crear la carpeta workspace y descargar los repositorios dentro:**
+3 - **Crear la carpeta workspace y descargar los repositorios dentro:**
 
 ```bash
 mkdir workspace
@@ -36,6 +27,17 @@ cd workspace
 git clone git@github.com:GoIntegro/go5-bulk.git
 
 ```
+
+4 - **Levantar entorno docker:**
+
+En el root de la repo ejecutar:
+
+```bash
+docker-compose up -d
+```
+
+(el build de la imagen de sails puede tardar)
+
 5 - **Levantar entorno:**
 
 ```bash
@@ -46,7 +48,7 @@ git clone git@github.com:GoIntegro/go5-bulk.git
 --------------------------------------------------------------------------
 
 **Logging:**
-Para ver logs de redis/mysql/sails:
+Para ver logs de redis / mysql / sails:
 
 - Redis:
 ```bash
