@@ -30,7 +30,7 @@ git clone git@github.com:GoIntegro/go5-bulk.git
 
 4 - **Levantar entorno docker:**
 
-En el root de la repo ejecutar:
+En el root del repo ejecutar:
 
 ```bash
 docker-compose up -d
@@ -41,7 +41,6 @@ docker-compose up -d
 5 - **Levantar entorno:**
 
 ```bash
-# levantar mobile
 ./start_environment.sh
 ```
 
