@@ -1,0 +1,29 @@
+version: '3'
+services:
+  sails:
+    ports:
+      - 1337
+    volumes:
+      - ./workspace:/home/user/workspace
+    build: 
+      context: ./
+      dockerfile: dockerfile-front    
+  db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_USER=bulk
+      - MYSQL_PASSWORD=bulk
+      - MYSQL_ALLOW_EMPTY_PASSWORD=no
+      - MYSQL_RANDOM_ROOT_PASSWORD=no
+      - MYSQL_DATABASE=go5_bulk
+      - MYSQL_ONETIME_PASSWORD=false
+    ports:
+      - 3306  
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379
+
