@@ -33,7 +33,7 @@ USER user
 WORKDIR /home/user
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash \ 
-	&& /bin/bash -c "source ~/.bashrc && source /home/user/.nvm/nvm.sh && nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && nvm use default && npm install npm@latest -g && npm install bower -g && npm install -g yarn && npm install sails -g"
+	&& /bin/bash -c "source ~/.bashrc && source /home/user/.nvm/nvm.sh && nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && nvm use default && npm install npm@latest -g && npm install bower -g && npm install -g yarn && npm install sails -g && npm install express -g"
 
 USER root
 
