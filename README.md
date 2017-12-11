@@ -41,10 +41,10 @@ docker-compose up -d
 Nota: Este comando crea el entorno y levanta los containers, esto debe ejecutarse solo la primera vez. Luego levantar y detener el entorno con los siguientes comandos:
 
 ```bash
-// start containers
+# start containers
 docker-compose start
 
-// stop containers
+# stop containers
 docker-compose stop
 ```
 
