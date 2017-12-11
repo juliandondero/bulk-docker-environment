@@ -38,16 +38,20 @@ docker-compose up -d
 
 (el build de la imagen de sails puede tardar)
 
-5 - **Levantar entorno:**
+Nota: Este comando crea el entorno y levanta los containers, esto debe ejecutarse solo la primera vez. Luego levantar y detener el entorno con los siguientes comandos:
 
 ```bash
-./start_environment.sh
+// start containers
+docker-compose start
+
+// stop containers
+docker-compose stop
 ```
 
 --------------------------------------------------------------------------
 
 **Logging:**
-Para ver logs de redis / mysql / sails:
+Para ver logs de redis / mysql / sails (sails, y workers):
 
 - Redis:
 ```bash
@@ -57,9 +61,12 @@ docker-compose logs -f redis
 ```bash
 docker-compose logs -f db
 ```
-- sails:
+- sails y workers js:
 ```bash
 docker-compose logs -f sails
 ```
 
+--------------------------------------------------------------------------
+
+Los tres servicios de la aplicacion corren como servicios de supervisor, estos inician automaticamente al arrancar los containers.
 
