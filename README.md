@@ -66,6 +66,10 @@ docker-compose logs -f db
 docker-compose logs -f sails
 ```
 
+- Todos los logs juntos:
+```bash
+docker-compose logs -f
+```
 --------------------------------------------------------------------------
 
 Los tres servicios de la aplicacion corren como servicios de supervisor, estos inician automaticamente al arrancar los containers.
