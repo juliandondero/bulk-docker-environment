@@ -70,3 +70,5 @@ docker-compose logs -f sails
 
 Los tres servicios de la aplicacion corren como servicios de supervisor, estos inician automaticamente al arrancar los containers.
 
+Nota: Para conectarse a qa se debe tener la vpn prendida en la maquina host.
+
